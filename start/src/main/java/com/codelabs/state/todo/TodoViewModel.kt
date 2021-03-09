@@ -29,7 +29,7 @@ class TodoViewModel : ViewModel() {
     var todoItems: List<TodoItem> by mutableStateOf(listOf())
         private set
 
-    private val currentEditItem: TodoItem?
+    val currentEditItem: TodoItem?
         get() = todoItems.getOrNull(currentEditPosition)
 
     fun addItem(item: TodoItem) {
